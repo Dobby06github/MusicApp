@@ -1,0 +1,94 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 8, 51, 0.9), rgba(143, 157, 225, 0.9)), url("../img/background - Copy.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container ul {
+    list-style-type: none; /* Remove bullets from the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+
+.search-bar {
+    posiiton: fixed;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.search-bar input {
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    width: 70%; /* Set a fixed width for the input */
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #fafafa;
+    /* Apply border-radius to maintain rounded corners */
+}
+
+
+
+
+
+::placeholder {
+    color: #cccccc;
+    opacity: 50%;
+}
+
+
+
+.search-bar button{
+    border: 0;
+    border-radius: 5px;
+    width: 30%;
+    height: 100%;
+    background: #d5d9f8;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+}
+
+.artist-info {
+    text-align: center;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+}
+
+{% if data.image %}
+    .artist-info img {
+        width: auto;
+        height: 300px;
+
+        margin-bottom: 20px;
+    }
+{% endif %}
