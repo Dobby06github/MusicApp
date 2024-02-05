@@ -32,9 +32,10 @@ body {
 
 
 .search-bar {
-    posiiton: fixed;
-    margin-bottom: 20px;
-    width: 100%;
+    position: fixed;
+    top: 20px; /* Adjust the distance from the top */
+    left: 20px; /* Adjust the distance from the left */
+    width: calc(100% - 40px); /* Adjust the width */
     max-width: 500px;
     background: rgba(255, 255, 255, 0.2);
     display: flex;
@@ -53,8 +54,6 @@ body {
     color: #fafafa;
     /* Apply border-radius to maintain rounded corners */
 }
-
-
 
 
 
@@ -78,17 +77,17 @@ body {
 }
 
 .artist-info {
-    text-align: center;
+    text-align: center; /* Center text */
     color: white;
     font-family: Poppins, sans-serif;
     font-size: 20px;
+    margin-top: 20px; /* Add some space between search bar and artist info */
 }
 
-{% if data.image %}
-    .artist-info img {
-        width: auto;
-        height: 300px;
+.artist-image {
+    width: auto;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 20px; /* Add some space between artist info and image */
 
-        margin-bottom: 20px;
-    }
-{% endif %}
+}

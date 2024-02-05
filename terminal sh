@@ -1,0 +1,2 @@
+docker build -t musicapp .
+docker run -d -p 5100:5100 musicapp

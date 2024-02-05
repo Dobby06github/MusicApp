@@ -14,23 +14,23 @@
                 <input type="text" placeholder="Search for an artist" name="artist_name" autocomplete="off">
                 <button type="submit">Search</button>
             </form>
-            <div class="artist-info">
-                {% if error %}
-                    <p>{{ error }}</p>
-                {% endif %}
-                {% if data %}
-                    <h2>{{ data.artist.name }}</h2>
-                    {% if data.image %}
-                        <img src="{{ data.image }}" alt="Artist Image" class="artist-image">
-                    {% endif %}
-                    <h3>Top Tracks:</h3>
-                    <ul>
-                        {% for song in data.songs %}
-                            <li>{{ loop.index }}. {{ song.name }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </div>
+        </div>
+        <div class="artist-info">
+            {% if error %}
+            <p>{{ error }}</p>
+            {% endif %}
+            {% if data %}
+            <h2>{{ data.artist.name }}</h2>
+            {% if data.image %}
+            <img src="{{ data.image }}" alt="Artist Image" class="artist-image">
+            {% endif %}
+            <h3>Top Tracks:</h3>
+            <ul>
+                {% for song in data.songs %}
+                <li>{{ loop.index }}. {{ song.name }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         </div>
     </div>
 </body>
